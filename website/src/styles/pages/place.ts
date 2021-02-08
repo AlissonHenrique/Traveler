@@ -227,7 +227,7 @@ export const Container = styled.div`
       .relationship-header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
 
         border-bottom: 1px solid #dce2e6;
         padding-bottom: 16px;
@@ -238,19 +238,27 @@ export const Container = styled.div`
           justify-content: space-between;
           width: 200px;
           .med {
-            font-family: Barlow;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5px;
 
-            color: #f25d27;
+            span {
+              font-family: Barlow;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 20px;
+              color: #f25d27;
+              display: block;
+              margin-left: 12px;
+            }
           }
         }
         .buttons {
           display: flex;
           justify-content: space-between;
           width: 140px;
+          cursor: pointer;
         }
         p {
           margin: 0;
@@ -269,6 +277,41 @@ export const Container = styled.div`
           line-height: 24px;
           text-align: right;
           color: #a0acb3;
+        }
+      }
+    }
+    .box-comment {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      grid-gap: 16px;
+      .box-img {
+      }
+      .content-card {
+        p {
+          margin: 0;
+          font-family: Heebo;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 26px;
+          color: #617480;
+        }
+        border-bottom: 1px solid #dce2e6;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        .content-title {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 16px;
+          p {
+            margin: 0;
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: #617480;
+          }
         }
       }
     }

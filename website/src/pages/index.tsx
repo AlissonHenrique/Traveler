@@ -29,7 +29,7 @@ export default function Home({ cities }: CitiesProps) {
             Descubra locais incríveis para se visitar em cidades maravilhosas de
             Santa Catarina.
           </p>
-          <Link href={"/lista"}>
+          <Link href="/list">
             <button type="button">Descobrir todos os lugares</button>
           </Link>
         </div>

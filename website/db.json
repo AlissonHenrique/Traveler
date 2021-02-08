@@ -48,5 +48,37 @@
       "image": "img-8.png",
       "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
     }
+  ],
+  "depositions": [
+    {
+      "id": 1,
+      "name": "Patricksom Vieras",
+      "avatar": "avatar-1.png",
+      "description": "Grande variedade de bolos, cucas, tortas e algumas opções de salgados."
+    },
+    {
+      "id": 2,
+      "name": "Maria Eduarda",
+      "avatar": "avatar-2.png",
+      "description": "Todos os produtos comercializados são de excelente qualidade, recomendo!"
+    },
+    {
+      "id": 3,
+      "name": "Antônio Rachaduz",
+      "avatar": "avatar-3.png",
+      "description": "Parabéns aos proprietários e funcionários pelo bom atendimento. Lugar aconchegante e com delícias variadas."
+    },
+    {
+      "id": 4,
+      "name": "Patricksom Vieras",
+      "avatar": "avatar-1.png",
+      "description": "Grande variedade de bolos, cucas, tortas e algumas opções de salgados."
+    },
+    {
+      "id": 5,
+      "name": "Maria Eduarda",
+      "avatar": "avatar-2.png",
+      "description": "Todos os produtos comercializados são de excelente qualidade, recomendo!"
+    }
   ]
 }

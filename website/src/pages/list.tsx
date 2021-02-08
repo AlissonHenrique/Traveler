@@ -4,7 +4,7 @@ import {
   Container,
   ContainerFillter,
   ContainerCard,
-} from "../styles/pages/lista";
+} from "../styles/pages/list";
 import logo from "../assets/images/logo.svg";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
