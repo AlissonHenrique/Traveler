@@ -138,6 +138,27 @@ export const ContainerModalAdd = styled.div`
   }
   .content-modal {
     padding: 40px;
+    .input-file {
+      input[type="file"] {
+      }
+      label {
+      }
+    }
+    textarea {
+      width: 100%;
+      background: #ffffff;
+      height: 136px;
+      border: 1px solid #dce2e6;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 18px 24px;
+      font-family: Heebo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #a0acb3;
+    }
 
     .content-stars {
       display: flex;
