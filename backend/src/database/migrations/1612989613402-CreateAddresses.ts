@@ -6,7 +6,6 @@ export default class CreateAddresses1612989613402
     await queryRunner.createTable(
       new Table({
         name: 'addresses',
-
         columns: [
           {
             name: 'id',
@@ -15,7 +14,6 @@ export default class CreateAddresses1612989613402
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
           },
-
           {
             name: 'zip_code',
             type: 'varchar',
@@ -24,7 +22,6 @@ export default class CreateAddresses1612989613402
             name: 'street',
             type: 'varchar',
           },
-
           {
             name: 'neighborhood',
             type: 'varchar',
@@ -35,17 +32,12 @@ export default class CreateAddresses1612989613402
           },
           {
             name: 'created_at',
-
             type: 'timestamp',
-
             default: 'now()',
           },
-
           {
             name: 'updated_at',
-
             type: 'timestamp',
-
             default: 'now()',
           },
         ],
@@ -54,6 +46,6 @@ export default class CreateAddresses1612989613402
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('categories');
+    await queryRunner.dropTable('addresses');
   }
 }

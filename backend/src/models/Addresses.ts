@@ -3,7 +3,10 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
+  OneToMany,
+  JoinColumn,
 } from 'typeorm';
+import Places from './Places';
 
 @Entity('addresses')
 export default class Addresses {
@@ -20,7 +23,11 @@ export default class Addresses {
   neighborhood: string;
 
   @Column()
-  number: string;
+  number: number;
+
+  @OneToMany(() => Places, places => places.addresses)
+  @JoinColumn({ name: 'address_id' })
+  places: Places[];
 
   @CreateDateColumn()
   created_at: Date;

@@ -3,22 +3,27 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
-  OneToMany,
-  JoinColumn,
 } from 'typeorm';
-import Places from './Places';
 
-@Entity('categories')
-export default class Categories {
+@Entity('depositions')
+export default class Depositions {
   @PrimaryGeneratedColumn('increment')
   id: string;
 
   @Column()
   name: string;
 
-  @OneToMany(() => Places, places => places.categories)
-  @JoinColumn({ name: 'category_id' })
-  places: Places[];
+  @Column()
+  avatar: string;
+
+  @Column()
+  description: string;
+
+  @Column()
+  city_id: string;
+
+  @Column()
+  place_id: string;
 
   @CreateDateColumn()
   created_at: Date;

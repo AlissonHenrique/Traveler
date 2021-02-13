@@ -18,12 +18,18 @@
   "rules": {
     "prettier/prettier": "error",
     "camelcase": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "class-methods-use-this": "off",
     "@typescript-eslint/camelcase": "off",
     "no-useless-constructor": "off",
-    "eslint-disable-next-line": "off",
+    "@typescript-eslint/eslint-disable-next-line": "off",
+    "no-unused-expressions": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
+    // "@typescript-eslint/interface-name-prefix": [
+    //   "error",
+    //   { "prefixWinthI": "always" }
+    // ],
     "import/extensions": [
       "error",
       "ignorePackages",

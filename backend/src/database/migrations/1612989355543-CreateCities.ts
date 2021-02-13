@@ -42,6 +42,6 @@ export default class CreateCities1612989355543 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('categories');
+    await queryRunner.dropTable('cities');
   }
 }
