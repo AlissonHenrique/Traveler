@@ -5,9 +5,11 @@ import {
   CreateDateColumn,
   ManyToOne,
   JoinColumn,
+  OneToMany,
 } from 'typeorm';
 import Addresses from './Addresses';
 import Categories from './Categories';
+import Depositions from './Depositions';
 
 @Entity('places')
 export default class Places {
@@ -36,6 +38,10 @@ export default class Places {
   @ManyToOne(() => Addresses, addresses => addresses.places)
   @JoinColumn({ name: 'address_id' })
   addresses: Addresses;
+
+  @OneToMany(() => Depositions, depositions => depositions.places)
+  @JoinColumn({ name: 'place_id' })
+  depositions: Depositions[];
 
   @CreateDateColumn()
   created_at: Date;

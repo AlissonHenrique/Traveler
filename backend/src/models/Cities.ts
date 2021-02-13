@@ -3,7 +3,10 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
+  JoinColumn,
+  OneToMany,
 } from 'typeorm';
+import Depositions from './Depositions';
 
 @Entity('cities')
 export default class Cities {
@@ -18,6 +21,10 @@ export default class Cities {
 
   @Column()
   description: string;
+
+  @OneToMany(() => Depositions, depositions => depositions.cities)
+  @JoinColumn({ name: 'city_id' })
+  depositions: Depositions[];
 
   @CreateDateColumn()
   created_at: Date;

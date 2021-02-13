@@ -3,7 +3,11 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
+  JoinColumn,
+  ManyToOne,
 } from 'typeorm';
+import Cities from './Cities';
+import Places from './Places';
 
 @Entity('depositions')
 export default class Depositions {
@@ -22,8 +26,16 @@ export default class Depositions {
   @Column()
   city_id: string;
 
+  @ManyToOne(() => Cities, cities => cities.depositions)
+  @JoinColumn({ name: 'city_id' })
+  cities: string;
+
   @Column()
   place_id: string;
+
+  @ManyToOne(() => Places, places => places.depositions)
+  @JoinColumn({ name: 'place_id' })
+  places: Places;
 
   @CreateDateColumn()
   created_at: Date;
