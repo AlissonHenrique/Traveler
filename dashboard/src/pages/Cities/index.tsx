@@ -14,6 +14,15 @@ function Cities() {
         </Header>
         <Content>
           <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </Content>
       </div>
     </Container>

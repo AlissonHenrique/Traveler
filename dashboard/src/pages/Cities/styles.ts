@@ -3,6 +3,11 @@ import { darken } from 'polished';
 
 export const Container = styled.div`
   display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  .content {
+    width: calc(100vw - 98px);
+  }
 `;
 export const Header = styled.div`
   width: calc(100vw - 96px);
@@ -34,4 +39,8 @@ export const Header = styled.div`
 `;
 export const Content = styled.div`
   padding: 48px 112px;
+  display: flex;
+  /* justify-content: flex-start;*/
+  flex-wrap: wrap;
+  gap: 32px;
 `;

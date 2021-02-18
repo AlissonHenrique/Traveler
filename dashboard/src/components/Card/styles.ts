@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 256px;
   background: url(${Img}) no-repeat;
   border-radius: 16px 16px 0px 0px;
+
   .bgCard {
     padding: 16px;
     height: 160px;
