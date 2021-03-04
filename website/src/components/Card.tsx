@@ -1,4 +1,4 @@
-import { CardItem, CardImage } from "../styles/components/card";
+import { CardItem, CardImage } from "../styles/components/Card.module";
 const pathImg = "http://localhost:4444/";
 interface ICard {
   local: string;

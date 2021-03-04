@@ -8,6 +8,7 @@ export const CardItem = styled.div`
   max-width: 254px;
   border-radius: 20px;
   margin-bottom: 32px;
+  cursor: pointer;
 
   .description {
     background-color: #fff;

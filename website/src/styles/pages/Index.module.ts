@@ -1,14 +1,15 @@
 import styled from "styled-components";
-
+import { shade } from "polished";
 export const Header = styled.div`
   width: 100%;
-  max-width: 1120px;
+  max-width: 1168px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
-
+  padding: 24px;
+  @media (max-width: 1200px) {
+  }
   button {
     display: block;
     border-radius: 10px;
@@ -28,10 +29,12 @@ export const Header = styled.div`
 `;
 export const Container = styled.div`
   width: 100%;
-  max-width: 1120px;
+  max-width: 1168px;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 24px;
   .box-one {
     margin: 138px 0 0 0;
     display: flex;
@@ -66,6 +69,10 @@ export const Container = styled.div`
       font-size: 18px;
       line-height: 26px;
       color: #ffffff;
+      transition: background-color 0.2s;
+      &:hover {
+        background: ${shade(0.2, "#f25d27")};
+      }
     }
   }
 
@@ -74,6 +81,7 @@ export const Container = styled.div`
     max-width: 640px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .cl2 {
       padding: 76px 0 0 0;
     }

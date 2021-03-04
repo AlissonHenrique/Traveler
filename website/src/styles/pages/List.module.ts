@@ -11,29 +11,6 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  input {
-    width: 416px;
-    height: 48px;
-    background: #f5f8fa;
-    border: 1px solid #dce2e6;
-    box-sizing: border-box;
-    border-radius: 10px;
-    padding: 11px 52px;
-    color: #a0acb3;
-    font-family: "Heebo", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    ::placeholder {
-      color: #a0acb3;
-      font-family: "Heebo", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 26px;
-    }
-  }
 
   button {
     display: block;
@@ -107,4 +84,53 @@ export const ContainerCard = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+`;
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  width: 416px;
+  height: 48px;
+  background: #f5f8fa;
+  border: 1px solid #dce2e6;
+  border-radius: 10px;
+  padding: 14px 16px;
+  input {
+    flex: 1;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+    border: 0;
+    background: #f5f8fa;
+    color: #123952;
+    font-family: "Heebo", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    ::placeholder {
+      color: #a0acb3;
+      font-family: "Heebo", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+`;
+export const NoSearch = styled.div`
+  width: 250px;
+  margin: calc(10%) auto 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    margin-top: 32px;
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    color: #617480;
+  }
 `;

@@ -1,4 +1,4 @@
-import { CardItem } from "../styles/components/cardEvent";
+import { CardItem } from "../styles/components/CardEvent.module";
 import { AiFillStar } from "react-icons/ai";
 import { FiCalendar, FiCoffee, FiCamera, FiArrowLeft } from "react-icons/fi";
 export default function CardEvent() {

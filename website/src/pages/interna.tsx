@@ -8,7 +8,7 @@ import {
   Box2,
   Box3,
   Box4,
-} from "../styles/pages/interna";
+} from "../styles/pages/Interna.module";
 import {
   FiCalendar,
   FiCoffee,

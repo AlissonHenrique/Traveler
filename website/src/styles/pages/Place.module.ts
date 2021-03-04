@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import bgEat from "../../assets/images/bgEat.png";
-import { darken } from "polished";
+import { shade } from "polished";
 export const ContainerHeader = styled.div`
   background: #fff;
   border-bottom: 1px solid #dce2e6;
@@ -58,7 +58,7 @@ export const Back = styled.div`
 
 export const BgContainer = styled.div`
   background: url(${bgEat}) no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 682px;
   height: 821px;
   position: absolute;
@@ -161,9 +161,9 @@ export const Container = styled.div`
           color: #fff;
           margin-left: 12px;
         }
-
+        transition: background-color 0.2s;
         &:hover {
-          background: ${darken(0.03, "#449C47")};
+          background: ${shade(0.03, "#449C47")};
         }
       }
       p {

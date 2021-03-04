@@ -1,27 +1,29 @@
+import { FiArrowLeft } from "react-icons/fi";
+import { IoAlertCircleOutline } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import {
   ContainerHeader,
   Header,
   Back,
   BgContainer,
   Container,
-} from "../styles/pages/place";
+} from "../../styles/pages/Place.module";
 import {
   ContainerModal,
   ContentModal,
   ContainerModalAdd,
-} from "../styles/components/ModalDepoiments";
+} from "../../styles/components/ModalDepoiments.module";
 import { CgCloseR } from "react-icons/cg";
 import { BiComment } from "react-icons/bi";
-import { IoAlertCircleOutline } from "react-icons/io5";
+
 const pathImg = "http://localhost:4444/";
-import { FiArrowLeft } from "react-icons/fi";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../assets/images/logo.svg";
-import mapa from "../assets/images/Mapa.png";
-import user from "../assets/images/user.png";
-import { FaWhatsapp } from "react-icons/fa";
+import logo from "../../assets/images/logo.svg";
+import mapa from "../../assets/images/Mapa.png";
+import user from "../../assets/images/user.png";
 import { GetServerSideProps } from "next";
 import React, { useState } from "react";
 import Modal from "react-modal";
@@ -68,7 +70,9 @@ export default function Place({ depoiments }: DepoimentsProps) {
             <Image alt="Logo" src={logo} width={156} height={32} />
             <Back>
               <Link href="/list">
-                <FiArrowLeft color="#A0ACB3" size={30} />
+                <>
+                  <FiArrowLeft color="#A0ACB3" size={30} />
+                </>
               </Link>
             </Back>
           </div>

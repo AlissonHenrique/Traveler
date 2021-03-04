@@ -1,4 +1,4 @@
-import { Header, Container } from "../styles/pages/index";
+import { Header, Container } from "../styles/pages/Index.module";
 import Card from "../components/Card";
 import Image from "next/image";
 import logo from "../assets/images/logo.svg";
