@@ -8,8 +8,7 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  @media (max-width: 1200px) {
-  }
+
   button {
     display: block;
     border-radius: 10px;

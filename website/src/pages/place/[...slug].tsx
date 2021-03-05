@@ -28,7 +28,8 @@ import { GetServerSideProps } from "next";
 import React, { useState } from "react";
 import Modal from "react-modal";
 
-export default function Place({ depoiments }: DepoimentsProps) {
+export default function Place({ place }: IProps) {
+  console.log(place);
   const customStyles = {
     overlay: {
       background: "rgba(18,57,82,0.6) ",
@@ -68,13 +69,12 @@ export default function Place({ depoiments }: DepoimentsProps) {
         <Header>
           <div className="btn-back">
             <Image alt="Logo" src={logo} width={156} height={32} />
-            <Back>
-              <Link href="/list">
-                <>
-                  <FiArrowLeft color="#A0ACB3" size={30} />
-                </>
-              </Link>
-            </Back>
+
+            <Link href="/list">
+              <Back>
+                <FiArrowLeft color="#A0ACB3" size={30} />
+              </Back>
+            </Link>
           </div>
         </Header>
       </ContainerHeader>
@@ -215,7 +215,7 @@ export default function Place({ depoiments }: DepoimentsProps) {
               <p>Nota 4,5</p>
               <div className="comment">
                 <BiComment size={24} color="#A0ACB3" />
-                <span>{depoiments.length} comentarios</span>
+                <span>{place.length} comentarios</span>
               </div>
             </div>
             <div className="content-box-2">
@@ -229,7 +229,7 @@ export default function Place({ depoiments }: DepoimentsProps) {
             </div>
           </div>
           <ContentModal>
-            {depoiments.map((depo) => {
+            {place.map((depo) => {
               return (
                 <div className="card" key={depo.id}>
                   <div>
@@ -312,22 +312,22 @@ export default function Place({ depoiments }: DepoimentsProps) {
   );
 }
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch("http://localhost:4444/depositions");
-  const depoiments = await response.json();
+  const response = await fetch("http://localhost:4444/place");
+  const place = await response.json();
 
   return {
     props: {
-      depoiments,
+      place,
     },
   };
 };
-interface Idepositions {
+interface IPlaceProps {
   id: number;
   name: string;
   description: string;
   avatar: string;
 }
 
-interface DepoimentsProps {
-  depoiments: Idepositions[];
+interface IProps {
+  place: IPlaceProps[];
 }

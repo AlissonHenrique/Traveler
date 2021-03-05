@@ -12,7 +12,7 @@ interface ICard {
 
 export default function CardList({ name, local, image, id }: ICard) {
   return (
-    <Link href={`/place/${regex(name)}/${id}`}>
+    <Link href={`/cidade/${regex(name)}/${id}`}>
       <CardItem>
         <CardImage image={`${pathImg}${image}`} />
         <div className="description">

@@ -1,5 +1,5 @@
 {
-  "city": [
+  "cities": [
     {
       "id": 1,
       "name": "Florianópolis",
@@ -79,6 +79,81 @@
       "name": "Maria Eduarda",
       "avatar": "avatar-2.png",
       "description": "Todos os produtos comercializados são de excelente qualidade, recomendo!"
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Pontos Turísticos"
+    },
+    {
+      "id": 2,
+      "name": "Comida e Bebida"
+    },
+    {
+      "id": 3,
+      "name": "Eventos Organizados"
+    }
+  ],
+
+  "addresses": [
+    {
+      "id": 1,
+      "zip_code": "0603242340234",
+      "street": "Rua madeira",
+      "neighborhood": "sao siovestre",
+      "number": "12345"
+    }
+  ],
+  "places": [
+    {
+      "id": 1,
+      "name": "Florianópolis",
+      "image": "img-1.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 2,
+      "name": "Blumenau",
+      "image": "img-2.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 3,
+      "name": "Bombinhas",
+      "image": "img-1.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 4,
+      "name": "Águas Mornas",
+      "image": "img-1.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 5,
+      "name": "Imbituba",
+      "image": "img-1.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 6,
+      "name": "Jaraguá do Sul",
+      "image": "img-6.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 7,
+      "name": "Lages",
+      "image": "img-7.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
+    },
+    {
+      "id": 8,
+      "name": "Rio do Sul",
+      "image": "img-8.png",
+      "description": "Capital do estado de Santa Catarina no sul do Brasil, é maioritariamente constituída pela Ilha de Santa Catarina, com 54 km de comprimento."
     }
   ]
 }

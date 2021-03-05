@@ -13,6 +13,13 @@ function AddProfileCity() {
   const [description, setDescription] = useState('');
   const [images, setImages] = useState<File[]>([]);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
+  const [namePlace, setNamePlace] = useState('');
+  const [descriptionPlace, setDescriptionPlace] = useState('');
+  const [categorie, setCategorie] = useState('');
+  const [zipCode, setZipCode] = useState('');
+  const [street, setStreet] = useState('');
+  const [neighborhood, setNeighborhood] = useState('');
+  const [number, setNumber] = useState('');
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
     if (!event.target.files) {
@@ -96,6 +103,7 @@ function AddProfileCity() {
                     />
                   </div>
                 </div>
+
                 <div className="input-block">
                   <label htmlFor="description">Descrição da cidade</label>
                   <textarea
@@ -122,15 +130,52 @@ function AddProfileCity() {
               </form>
             </div>
 
-            <div className="header">
+            <div className="header ">
               <div className="box-number">
                 <p>02</p>
               </div>
               <h1>Adicione um local</h1>
-              <div className="content">
-                <h2>Dados da cidade</h2>
-                <div className="risco" />
-              </div>
+            </div>
+            <div className="content">
+              <h2>Dados Básicos</h2>
+              <div className="risco" />
+              <form>
+                <div className="input-block">
+                  <label htmlFor="name">Nome da cidade</label>
+                  <input
+                    id="name"
+                    value={namePlace}
+                    onChange={e => setNamePlace(e.target.value)}
+                  />
+                </div>
+                <div className="input-block">
+                  <label htmlFor="images">Foto da cidade </label>
+
+                  <div className="images-container">
+                    {previewImages.map(image => {
+                      return <img key={image} src={image} alt={name} />;
+                    })}
+                    <label htmlFor="image[]" className="new-image">
+                      + Adicionar uma foto
+                    </label>
+                    <input
+                      multiple
+                      type="file"
+                      id="image[]"
+                      onChange={handleSelectImages}
+                    />
+                  </div>
+                </div>
+                <div className="input-block">
+                  <label htmlFor="description">Descrição do local</label>
+                  <textarea
+                    id="name"
+                    maxLength={300}
+                    value={descriptionPlace}
+                    onChange={e => setDescriptionPlace(e.target.value)}
+                  />
+                </div>
+              </form>
             </div>
           </BoxWhite>
         </Content>

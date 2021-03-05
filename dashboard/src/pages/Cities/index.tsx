@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../../components/Card';
 import MenuBar from '../../components/MenuBar';
 import { Container, Header, Content } from './styles';
@@ -10,7 +11,9 @@ function Cities() {
       <div className="content">
         <Header>
           <h1>Cidades</h1>
-          <button type="button">+ Adicionar um perfil</button>
+          <Link to="/addprofilecity">
+            <button type="button">+ Adicionar um perfil</button>
+          </Link>
         </Header>
         <Content>
           <Card />

@@ -8,7 +8,7 @@ import {
   Box2,
   Box3,
   Box4,
-} from "../styles/pages/Interna.module";
+} from "../../styles/pages/City.module";
 import {
   FiCalendar,
   FiCoffee,
@@ -16,40 +16,47 @@ import {
   FiArrowLeft,
   FiAlertCircle,
 } from "react-icons/fi";
-import logo from "../assets/images/logo.svg";
+import logo from "../../assets/images/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import CardEvent from "../components/CardEvent";
-
-export default function Interna() {
+import CardEvent from "../../components/CardEvent";
+import { GetServerSideProps } from "next";
+interface ICities {
+  name: string;
+  description: string;
+  image: string;
+}
+interface CitiesProps {
+  cities: ICities;
+}
+const pathImg = "http://localhost:4444/";
+export default function Cidade({ cities }: CitiesProps) {
   return (
     <>
       <ContainerHeader>
         <Header>
           <div className="btn-back">
             <Image alt="Logo" src={logo} width={156} height={32} />
-            <Back>
-              <Link href={"/list"}>
+
+            <Link href={"/list"}>
+              <Back>
                 <FiArrowLeft color="#A0ACB3" size={30} />
-              </Link>
-            </Back>
+              </Back>
+            </Link>
           </div>
           <p>Cidade</p>
           <button type="button">Acesso restrito</button>
         </Header>
       </ContainerHeader>
-      <ContainerBanner />
+      <ContainerBanner image={`${pathImg}${cities.image}`} />
+
       <Container>
         <Box1>
           <div className="text">
-            <h1>Florianópolis</h1>
+            <h1>{cities.name}</h1>
 
-            <p>
-              Capital do estado de Santa Catarina no sul do Brasil, é
-              maioritariamente constituída pela Ilha de Santa Catarina, com 54
-              km de comprimento.
-            </p>
+            <p>{cities.description}</p>
 
             <span>
               É famosa pelas suas praias, incluindo estâncias turísticas
@@ -59,7 +66,6 @@ export default function Interna() {
           <div className="cardTypes">
             <div className="cardTypesInner">
               <div className="cardTypesInnerIcon">
-                {" "}
                 <FiCamera color="#F25D27" size={30} />
               </div>
               <div className="cardTypesInnerText">
@@ -147,3 +153,18 @@ export default function Interna() {
     </>
   );
 }
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { slug } = context.params;
+
+  const response = await fetch(
+    `http://localhost:4444/cities/${String(slug[1])}`
+  );
+
+  const cities = await response.json();
+
+  return {
+    props: {
+      cities,
+    },
+  };
+};

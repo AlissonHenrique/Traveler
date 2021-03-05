@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import ImgBanner from "../../assets/images/Banner.png";
 import ImgBoxDestaque from "../../assets/images/bgDestaque.png";
+interface IBannerProps {
+  image: string;
+}
 export const ContainerHeader = styled.div`
   background: #fff;
   border-bottom: 1px solid #dce2e6;
@@ -55,12 +57,11 @@ export const Back = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const ContainerBanner = styled.div`
+export const ContainerBanner = styled.div<IBannerProps>`
   width: 100%;
-  background: url(${ImgBanner}) no-repeat center bottom red;
-  background-size: 100%;
-
   height: 340px;
+  background: url(${(props) => props.image}) no-repeat center top;
+  background-size: 100%;
 `;
 export const Container = styled.div`
   width: 100%;

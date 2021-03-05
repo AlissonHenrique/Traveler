@@ -86,19 +86,19 @@ export default function List({ cities }: CitiesProps) {
             <h1>Selecione uma cidade</h1>
             <div className="filter">
               <div
-                className={"tab-1" === activeTab ? " active" : ""}
+                className={"tab-1" === activeTab ? "active" : ""}
                 onClick={() => handleAll("tab-1")}
               >
                 <p>Todas</p>
               </div>
               <div
-                className={"tab-2" === activeTab ? " active" : ""}
+                className={"tab-2" === activeTab ? "active" : ""}
                 onClick={() => handleMoreAccess("tab-2")}
               >
                 <p>Mais acessadas</p>
               </div>
               <div
-                className={"tab-3" === activeTab ? " active" : ""}
+                className={"tab-3" === activeTab ? "active" : ""}
                 onClick={() => handleOrderAz("tab-3")}
               >
                 <p>A - Z</p>
@@ -137,7 +137,7 @@ export default function List({ cities }: CitiesProps) {
   );
 }
 export const getServerSideProps: GetServerSideProps<CitiesProps> = async () => {
-  const response = await fetch("http://localhost:4444/city");
+  const response = await fetch("http://localhost:4444/cities");
   const cities = await response.json();
 
   random(cities);

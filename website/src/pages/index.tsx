@@ -64,7 +64,7 @@ export default function Home({ cities }: CitiesProps) {
   );
 }
 export const getServerSideProps: GetServerSideProps<CitiesProps> = async () => {
-  const response = await fetch("http://localhost:4444/city");
+  const response = await fetch("http://localhost:4444/cities");
   const cities = await response.json();
   random(cities);
   return {

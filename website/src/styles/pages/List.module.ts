@@ -5,12 +5,12 @@ export const ContainerHeader = styled.div`
 `;
 export const Header = styled.div`
   width: 100%;
-  max-width: 1120px;
+  max-width: 1168px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 24px;
 
   button {
     display: block;
@@ -31,8 +31,8 @@ export const Header = styled.div`
 `;
 export const Container = styled.div`
   width: 100%;
-  max-width: 1120px;
-
+  max-width: 1168px;
+  padding: 0 24px;
   margin: 0 auto;
 `;
 
@@ -40,6 +40,7 @@ export const ContainerFillter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 40px 0;
   h1 {
     font-family: "Barlow", sans-serif;
@@ -68,7 +69,7 @@ export const ContainerFillter = styled.div`
     }
     .active {
       p {
-        font-family: Roboto;
+        font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
